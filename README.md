@@ -1,2 +1,2 @@
-# python-api-trials
+# Python API Trials
 Python/C API Trials
