@@ -15,5 +15,14 @@ class HelloWorldTest(unittest.TestCase):
             self.assertEqual(
                 helloworld.hello(name), 'Hello {}!'.format(name))
 
+    def test_largename248(self):
+        name = 'a'*248
+        self.assertEqual(helloworld.hello(name), 'Hello {}!'.format(name))
+
+    def test_largename249(self):
+        name = 'a'*249
+        with self.assertRaises(helloworld.Error):
+            helloworld.hello(name)
+
 if __name__ == '__main__':
     unittest.main()
